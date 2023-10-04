@@ -207,8 +207,6 @@ function Animation(timeStamp) {
     const RAVEN_INTERVAL = RAVEN_BASE_INTERVAL - Math.floor(score / 20) * 30;
     ravenSpeedUp = RAVEN_BASE_SPEED + Math.floor(score / 10) / 10;
 
-    console.log(ravenSpeedUp);
-
     if (ravenTimer > (RAVEN_INTERVAL <= 100 ? 100 : RAVEN_INTERVAL)) {
         enemies.push(new Enemy());
         ravenTimer = 0;
