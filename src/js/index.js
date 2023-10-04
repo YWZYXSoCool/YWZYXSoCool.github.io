@@ -6,8 +6,11 @@ const ctx = canvas.getContext("2d");
 const CANVAS_WIDTH = (canvas.width = innerWidth);
 const CANVAS_HEIGHT = (canvas.height = innerHeight);
 
-const RAVEN_INTERVAL = 400;
+const RAVEN_BASE_INTERVAL = 400;
+let ravenInterval = RAVEN_BASE_INTERVAL;
 let ravenTimer = 0;
+const RAVEN_BASE_SPEED = 0.7;
+let ravenSpeedUp = RAVEN_BASE_SPEED;
 
 let score = 0;
 let isGameOver = false;
@@ -27,8 +30,8 @@ class Enemy {
         this.height = 50 * this.SCALE;
         this.x = CANVAS_WIDTH;
         this.y = Math.random() * (CANVAS_HEIGHT - this.height);
-        this.dirX = Math.random() * 3 + 2;
-        this.dirY = Math.random() * 4 - 1;
+        this.dirX = Math.random() * 3 + 2 * ravenSpeedUp;
+        this.dirY = Math.random() * 4 - 1 * ravenSpeedUp;
         this.die = false;
 
         this.FLIP_INTERVAL = Math.random() * 50 + 50;
@@ -190,8 +193,6 @@ window.addEventListener("click", (e) => {
     const eventX = e.clientX,
         eventY = e.clientY;
 
-    console.log(eventX, eventY);
-
     [...enemies].forEach((object) => object.CheckHitPoint(eventX, eventY));
 });
 
@@ -202,7 +203,13 @@ function Animation(timeStamp) {
     const dt = timeStamp - lastTime;
     lastTime = timeStamp;
     ravenTimer += dt;
-    if (ravenTimer > RAVEN_INTERVAL) {
+
+    const RAVEN_INTERVAL = RAVEN_BASE_INTERVAL - Math.floor(score / 20) * 30;
+    ravenSpeedUp = RAVEN_BASE_SPEED + Math.floor(score / 10) / 10;
+
+    console.log(ravenSpeedUp);
+
+    if (ravenTimer > (RAVEN_INTERVAL <= 100 ? 100 : RAVEN_INTERVAL)) {
         enemies.push(new Enemy());
         ravenTimer = 0;
     }
