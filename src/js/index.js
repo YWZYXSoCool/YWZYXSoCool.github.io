@@ -15,12 +15,21 @@ let ravenSpeedUp = RAVEN_BASE_SPEED;
 let score = 0;
 let isGameOver = false;
 
+/**
+ *
+ * @param {string} path
+ * @returns {string}
+ */
+function GetFullPath(path) {
+    return location.host.split("?")[0] + "/" + path;
+}
+
 let enemies = [];
 class Enemy {
     constructor() {
         // Image
         this.image = new Image();
-        this.image.src = "../src/image/enemy.png";
+        this.image.src = "src/image/enemy.png";
         this.SPRITE_WIDTH = 271;
         this.SPRITE_HEIGHT = 194;
         this.frame = 0;
@@ -128,14 +137,14 @@ let explosions = [];
 class Explosion {
     constructor(x, y, scale) {
         this.image = new Image();
-        this.image.src = "../src/image/boom.png";
+        this.image.src = "src/image/boom.png";
         this.frame = 0;
         this.SCALE = scale;
         this.SPRITE_WIDTH = 200;
         this.SPRITE_HEIGHT = 179;
 
         this.sound = new Audio();
-        this.sound.src = "../src/sound/boom.wav";
+        this.sound.src = "src/sound/boom.wav";
 
         this.x = x;
         this.y = y;
