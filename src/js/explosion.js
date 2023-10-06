@@ -1,22 +1,29 @@
-import { EXPLOSION_IMAGE } from "./const.js";
+import { BOOM_PATH, EXPLOSION_IMAGE } from "./const.js";
 
 export default class Explosion {
     /**
+     * Represents an explosion in the game.
      *
-     * @param {number} x
-     * @param {number} y
-     * @param {number} scale
+     * @param {number} x - The X-coordinate of the explosion.
+     * @param {number} y - The Y-coordinate of the explosion.
+     * @param {number} scale - The scale factor for the explosion.
      */
     constructor(x, y, scale) {
+        // Load the explosion image.
         this.image = EXPLOSION_IMAGE;
+
+        // Initialize frame and scale properties.
         this.frame = 0;
         this.SCALE = scale;
+
+        // Define sprite dimensions.
         this.SPRITE_WIDTH = 200;
         this.SPRITE_HEIGHT = 179;
 
-        this.sound = new Audio();
-        this.sound.src = "src/sound/boom.wav";
+        // Load explosion sound.
+        this.BOOM = new Audio(BOOM_PATH);
 
+        // Set initial position and dimensions.
         this.x = x;
         this.y = y;
         this.width = 200 * (this.SCALE * 0.5);
@@ -24,14 +31,17 @@ export default class Explosion {
         this.timeSinceLastFrame = 0;
         this.FRAME_INTERVAL = 70;
 
+        // Flag to indicate if the explosion should be removed.
         this.die = false;
     }
+
     /**
+     * Update the explosion animation frame.
      *
-     * @param {number} dt
+     * @param {number} dt - The time elapsed since the last frame.
      */
     Update(dt) {
-        if (this.frame == 0) this.sound.play();
+        if (this.frame == 0) this.BOOM.play();
         this.timeSinceLastFrame += dt;
         if (this.timeSinceLastFrame > this.FRAME_INTERVAL) {
             this.frame++;
@@ -39,9 +49,11 @@ export default class Explosion {
             if (this.frame >= 5) this.die = true;
         }
     }
+
     /**
+     * Draw the explosion on the canvas context.
      *
-     * @param {CanvasRenderingContext2D} ctx
+     * @param {CanvasRenderingContext2D} ctx - The 2D rendering context.
      */
     Draw(ctx) {
         ctx.drawImage(

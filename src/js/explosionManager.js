@@ -3,19 +3,23 @@ import Explosion from "./explosion.js";
 class ExplosionManager {
     constructor() {
         /** @type {Explosion[]} */
-        this.explosions = [];
+        this.explosions = []; // An array to store explosion objects.
     }
 
     /**
-     *
-     * @param {number} x
-     * @param {number} y
-     * @param {number} scale
+     * Create and add a new explosion to the manager.
+     * @param {number} x - The x-coordinate of the explosion.
+     * @param {number} y - The y-coordinate of the explosion.
+     * @param {number} scale - The scale of the explosion.
      */
     CallExplosion(x, y, scale) {
         this.explosions.push(new Explosion(x, y, scale));
     }
 
+    /**
+     * Update all explosions in the manager.
+     * @param {number} dt - The delta time for updating.
+     */
     Update(dt) {
         this.explosions.forEach((explosion) => {
             explosion.Update(dt);
@@ -26,8 +30,8 @@ class ExplosionManager {
     }
 
     /**
-     *
-     * @param {CanvasRenderingContext2D} ctx
+     * Draw all explosions on the canvas.
+     * @param {CanvasRenderingContext2D} ctx - The canvas rendering context.
      */
     Draw(ctx) {
         this.explosions.forEach((explosion) => {
@@ -36,4 +40,4 @@ class ExplosionManager {
     }
 }
 
-export const explosionManager = new ExplosionManager();
+export const explosionManager = new ExplosionManager(); // Export an instance of ExplosionManager.

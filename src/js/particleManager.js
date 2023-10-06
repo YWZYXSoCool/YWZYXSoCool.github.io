@@ -7,16 +7,19 @@ class ParticleManager {
     }
 
     /**
-     *
-     * @param {number} x
-     * @param {number} y
-     * @param {number} scale
-     * @param {string} color
+     * Calls the Particle constructor to create a new particle and adds it to the particles array.
+     * @param {number} x - The X coordinate.
+     * @param {number} y - The Y coordinate.
+     * @param {number} scale - The scale of the particle.
+     * @param {string} color - The color of the particle.
      */
     CallParticle(x, y, scale, color) {
         this.particles.push(new Particle(x, y, scale, color));
     }
 
+    /**
+     * Updates all particles in the particles array.
+     */
     Update() {
         this.particles.forEach((particle) => {
             particle.Update();
@@ -27,8 +30,8 @@ class ParticleManager {
     }
 
     /**
-     *
-     * @param {CanvasRenderingContext2D} ctx
+     * Draws all particles on the canvas context.
+     * @param {CanvasRenderingContext2D} ctx - The canvas rendering context.
      */
     Draw(ctx) {
         this.particles.forEach((particle) => {
