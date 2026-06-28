@@ -1,28 +1,132 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kill that zombie</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+            }
+        </style>
+      <script type="module" crossorigin src="/assets/index-B9D8kfOZ.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-D9-fqq9M.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DLttLhM8.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BBmvRgWq.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DgiVaOOL.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-_kXIi910.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Cl1xJoKN2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DoJOvQNv.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DtAv68Rd.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Bk6Zqnds.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-uSfBjU4f.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BnaWGRXb.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C8h65M8p2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Co-lXmFm.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C8ot0pSI2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CkYwwn8h2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-jT6x-SFw2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-SZf44UGL.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DdMACxha2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CdLyBIe4.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DBmmUDTG2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DodONK3Q2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CIgzdb4P.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-wceJ-iGV.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CeZEK5K7.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-qQo7aa2P.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B2Z0Ahsu.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B0HeKX-a2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-NE-hyRLh2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-D-IjXMeQ2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BUJlo0Ky2.js">
+      <link rel="modulepreload" crossorigin href="/assets/spector-B5thOluD.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DeXq-_1x2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C4mhgoec2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-VFbOKSSW2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BKfuAXVH2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DJZYn4t22.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B12nb5iV2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-H2lX-3ed.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CGC9wMwL2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-F8PMo1XU.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BJfwkrPU.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BMS5ynQ1.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BV2dEmmj.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B7wLxIfz.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DQhGtaPy.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CP_ZJiBk.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B0zIVesu.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Cb0ZD63t.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DC6XPxGR.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-IwxDbbQZ.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-N3NotIHD.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-D-q_A_36.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C82f7Kfu.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CQNX88yD.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DFXAGEUn.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DfM3B3L0.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CJGgijVq.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-zMtRPR9P.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-_GM17rqp.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B40mA2_d.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CtdJH__W.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BMsBmJtb.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Ds5Z9dhy.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CwHfR-wW.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CKI-bsLN.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-D1hB97dJ2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DrxqXJhq.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Dt5U_F8e.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B3sFEZkL.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DxjfCycL.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CWDipnIF2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DDHxdIDo2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C4NQ2pMh.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CfiX2TD72.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B9P2Z4T9.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DGDnkp21.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CkT8Xtry.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-0liAbrFx.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-IJ3YUKyF.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-D-QrMxP0.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-bdhcMujj.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DbOCXX1P.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BJaOH2Di.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CU_7N-vz.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DZL0ZphW.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BmJ7bXcT.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Cm_ds3SE.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CSnVsCu_.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B6sIP4qu2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-D3BcZPBk.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C7xOxE72.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BUI_6gYl2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BK30NSYD2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-C5BLsJeO2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BzCteNP62.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DO1Ovjbt.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DGMUBrTL.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BpGfJYIW2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-B0gxUjG0.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-Cbo921jq.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-DZQv1Cip.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BOXedGCb.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-CNIH1Mhd.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-tgjKs7PD2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-srF_t7aF2.js">
+      <link rel="modulepreload" crossorigin href="/assets/phaser-BITHNXPQ2.js">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-
-    <title>Fool Shot Game</title>
-
-    <style>
-        * {
-            margin: 0;
-        }
-
-        canvas {
-            position: absolute;
-            background-image: linear-gradient(140deg, #FF0000, #FFF200, #1E9600);
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
-    <canvas id="main"></canvas>
-
-    <script src="./src/js/index.js" type="module"></script>
-</body>
-
+    <body>
+        <div id="app"></div>
+    </body>
 </html>
