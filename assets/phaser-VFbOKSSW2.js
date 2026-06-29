@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-D9-fqq9M.js";import{i as t,t as n}from"./phaser-DGMUBrTL.js";import{t as r}from"./phaser-D-IjXMeQ2.js";import{t as i}from"./phaser-C4mhgoec2.js";var a=e(((e,a)=>{a.exports={Events:t(),Snapshot:r()},typeof CANVAS_RENDERER&&(a.exports.Canvas=n()),typeof WEBGL_RENDERER&&(a.exports.WebGL=i())}));export{a as t};

@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-D9-fqq9M.js";import{n as t,r as n,t as r}from"./phaser-tgjKs7PD2.js";var i=e(((e,t)=>{t.exports=`complete`})),a=e(((e,t)=>{t.exports={COMPLETE:i()}})),o=e(((e,i)=>{i.exports={Clock:t(),Events:a(),Timeline:r(),TimerEvent:n()}}));export{a as n,o as t};
